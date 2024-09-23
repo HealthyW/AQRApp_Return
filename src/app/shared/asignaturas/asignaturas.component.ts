@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-asignaturas',
@@ -10,5 +10,8 @@ export class AsignaturasComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+
+  @Input() spanText: string = 'Clase sin nombre';
+  @Input() divClass: string = 'custom-div';
 
 }
