@@ -8,6 +8,7 @@ import { BuscarComponent } from './buscar/buscar.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { SharedModule } from '../shared/shared.module';
 import { IonicModule } from '@ionic/angular';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { IonicModule } from '@ionic/angular';
     HomeComponent,
     CursosComponent,
     BuscarComponent,
-    ConfiguracionComponent
+    ConfiguracionComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
