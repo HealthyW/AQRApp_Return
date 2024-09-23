@@ -1,0 +1,7 @@
+{
+  "name": "AQRApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
