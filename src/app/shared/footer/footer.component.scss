@@ -1,0 +1,39 @@
+.flexi {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  
+a {
+    height: 40px;
+    width: 40px;
+    display: block;
+    background-color: #fff;
+
+    img{
+        height: 20px;
+    }
+
+    .presionado{
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out;
+    }
+}
+
+a.active .presionado{
+    background-color: #ECF5FD;
+}
+
