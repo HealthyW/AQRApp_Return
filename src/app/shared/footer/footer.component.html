@@ -1,3 +1,8 @@
-<p>
-  footer works!
-</p>
+<p> <a [routerLink]="['/home']">Home</a> </p>
+@if (usuario) {
+  <p> <a [routerLink]="['/logout']">Logout</a> </p>
+}
+@else {
+  <p> <a [routerLink]="['/login']">Login</a> </p>
+}
+

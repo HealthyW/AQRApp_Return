@@ -28,8 +28,20 @@ export class LoginComponent  implements OnInit {
   }
 
   isLoading: boolean= false;
-  async login() {
+  async login(usuario: string,clave: string) {
     this.isLoading = true;
+    await this.authService.BuscarBD(usuario, clave);
+    this.isLoading = false;
+
+    this.authService.isAuthenticated$.subscribe(isAuthenticated => {
+      if (isAuthenticated) {
+        this.usuario = '';
+        this.clave = '';
+        this.router.navigate(['/home']);
+      } else {
+        this.loginFailed = true;
+      }
+    })
     
   }
 }
