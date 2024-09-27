@@ -9,6 +9,9 @@ import { ConfiguracionComponent } from './configuracion/configuracion.component'
 import { SharedModule } from '../shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,12 +21,15 @@ import { LoginComponent } from './login/login.component';
     BuscarComponent,
     ConfiguracionComponent,
     LoginComponent,
+    LogoutComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
     SharedModule,
-    IonicModule
+    IonicModule,
+    FormsModule
   ]
 })
 export class PagesModule { }
