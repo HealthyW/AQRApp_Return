@@ -21,8 +21,8 @@ export class AuthService {
   webservice = inject(WebService);
 
   async BuscarBD(usuario: string, clave: string) {
-    const url = 'https://66f610b9436827ced975d4b7.mockapi.io/Cuentas'
-    const res = await this.webservice.request('GET', url, 'users') as Array<{ 
+    const url = 'https://66f610b9436827ced975d4b7.mockapi.io'
+    const res = await this.webservice.request('GET', url, 'Cuentas') as Array<{ 
       id: string, 
       email: string,
       name: string,

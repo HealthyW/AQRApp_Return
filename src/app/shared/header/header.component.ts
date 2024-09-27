@@ -13,8 +13,13 @@ export class HeaderComponent  implements OnInit {
   private authService = inject(AuthService);
 
   subscriptionAuthService: Subscription;
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.subscriptionAuthService = this.authService.usuario$.subscribe(usuario => {
+      this.usuario = usuario;
+    });
+  }
 
 }
