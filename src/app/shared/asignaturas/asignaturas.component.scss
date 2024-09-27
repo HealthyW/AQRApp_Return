@@ -1,12 +1,17 @@
+.contenedor{
+  overflow: hidden;
+  border: 1px solid #cfcfcf;
+}
+
 .cont_tipo1{
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #cfcfcf;
   padding: 16px;
   img{
     height: 16px;
+    transition: transform 0.3s ease;
   }
 }
 
@@ -26,4 +31,34 @@
 .last-div{
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+
+.bg-inactive {
+  background-color: #fff; 
+}
+
+.bg-active {
+  background-color: #ecf5fd; 
+}
+
+.hidden-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease-in-out;
+}
+
+.show-div{
+  height: 60px;
+  background-color: #ecf5fd;
+  border-left: 1px solid #cfcfcf;
+  border-right: 1px solid #cfcfcf;
+}
+
+.rotate-img {
+  transform: rotate(90deg); 
+  filter: invert(24%) sepia(71%) saturate(3515%) hue-rotate(198deg) brightness(93%) contrast(92%);
+  transition: transform 0.3s ease; 
 }
