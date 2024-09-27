@@ -33,12 +33,33 @@
   border-bottom-right-radius: 12px;
 }
 
+.boton{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #20517E;
+  color: #fff;
+  height: 40px;
+  width: 248px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  img{
+    height: 26px; 
+  }
+}
+
+.boton:hover{
+  background-color: #000;
+}
+
+
 .bg-inactive {
-  background-color: #fff; 
+  background-color: transparent;
 }
 
 .bg-active {
-  background-color: #ecf5fd; 
+  background-color: #ecf5fd;
 }
 
 .hidden-div{
