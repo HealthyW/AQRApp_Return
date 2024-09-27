@@ -1,17 +1,38 @@
 <ion-content>
-  <app-header></app-header>
-  <section class="cuerpo">
-    <div class="subheader">
-      <span>
-        Tus clases de hoy
-      </span>
-      <span>
-        Jueves 26
-      </span>
-    </div>
-    <div class="lista">
-      <app-asignaturas></app-asignaturas>
-    </div>
-  </section>
-  <app-footer></app-footer>
+  <router-outlet>
+    <app-header></app-header>
+    <section class="cuerpo">
+      <div class="subheader">
+        <span>
+          Tus clases de hoy
+        </span>
+        <span>
+          Jueves 26
+        </span>
+      </div>
+      <div class="lista">
+        <app-asignaturas 
+        [spanText]="'PGY4121_001D'"
+        [divClass]="'first-div'">
+        </app-asignaturas>
+        <app-asignaturas 
+        [spanText]="'PY41447_005D'"
+        [divClass]="'mid-div'">
+        </app-asignaturas>
+        <app-asignaturas 
+        [spanText]="'ASY4131_001D'"
+        [divClass]="'mid-div'">
+        </app-asignaturas>
+        <app-asignaturas 
+        [spanText]="'CSY4111_001D'"
+        [divClass]="'mid-div'">
+        </app-asignaturas>
+        <app-asignaturas 
+        [spanText]="'MAT4140_013D'"
+        [divClass]="'last-div'">
+        </app-asignaturas>
+      </div>
+    </section>
+  </router-outlet>
 </ion-content>
+<app-footer></app-footer>

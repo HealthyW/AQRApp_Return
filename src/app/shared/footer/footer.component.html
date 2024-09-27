@@ -1,8 +1,25 @@
-<p> <a [routerLink]="['/home']">Home</a> </p>
-@if (usuario) {
-  <p> <a [routerLink]="['/logout']">Logout</a> </p>
-}
-@else {
-  <p> <a [routerLink]="['/login']">Login</a> </p>
-}
+<section class="flexi">
+  <a [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+    <div class="presionado">
+      <img src="assets\icon\home_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="home">
+    </div>
+  </a>
 
+  <a [routerLink]="['/cursos']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+    <div class="presionado">
+      <img src="assets\icon\library_books_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="clases">
+    </div>
+  </a>
+
+  <a [routerLink]="['/buscar']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+    <div class="presionado" >
+      <img src="assets\icon\search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="search">
+    </div>
+  </a>
+
+  <a [routerLink]="['/configuracion']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+    <div class="presionado">
+      <img src="assets\icon\settings_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="settings">
+    </div>
+  </a>
+</section>
