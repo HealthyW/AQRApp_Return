@@ -17,15 +17,15 @@ export class AppComponent {
 
     const fadeIn = this.animationCtrl.create()
       .addElement(enteringEl)
-      .duration(500)
+      .duration(250)
       .easing('ease-in')
-      .fromTo('opacity', 0.7, 1);
+      .fromTo('opacity', 0, 1);
 
     const fadeOut = this.animationCtrl.create()
       .addElement(leavingEl)
-      .duration(500)
+      .duration(250)
       .easing('ease-out')
-      .fromTo('opacity', 1, 0.7);
+      .fromTo('opacity', 0.5, 0);
 
     return this.animationCtrl.create()
       .addAnimation([fadeIn, fadeOut]);

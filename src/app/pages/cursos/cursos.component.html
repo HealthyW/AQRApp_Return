@@ -1,9 +1,37 @@
 <ion-content>
   <router-outlet>
     <app-header></app-header>
-      <p>
-        cursos works!
-      </p>
+    <section class="cuerpo">
+      <div class="subheader">
+        <span>
+          Todas tus asignaturas
+        </span>
+        <span>
+          Septiembre 2024
+        </span>
+      </div>
+      <div class="lista">
+        <app-asignaturas 
+        [spanText]="'Programacion Moviles'">
+        </app-asignaturas>
+        <br>
+        <app-asignaturas 
+        [spanText]="'Ingles Intermedio'">
+        </app-asignaturas>
+        <br>
+        <app-asignaturas 
+        [spanText]="'Portafolio Final'">
+        </app-asignaturas>
+        <br>
+        <app-asignaturas 
+        [spanText]="'Programacion Web'">
+        </app-asignaturas>
+        <br>
+        <app-asignaturas 
+        [spanText]="'Matematica Aplicada'">
+        </app-asignaturas>
+      </div>
+    </section>
   </router-outlet>
 </ion-content>
 <app-footer></app-footer>
