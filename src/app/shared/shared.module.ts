@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsignaturasComponent } from './asignaturas/asignaturas.component';
+import { IonicModule } from '@ionic/angular';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 
 
@@ -13,7 +15,10 @@ import { AsignaturasComponent } from './asignaturas/asignaturas.component';
     AsignaturasComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule,
+    RouterLink,
+    RouterLinkActive
   ],
   exports: [
     HeaderComponent,

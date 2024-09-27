@@ -3,10 +3,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 12px;
   border: 1px solid #cfcfcf;
   padding: 16px;
   img{
     height: 16px;
   }
+}
+
+.custom-div{
+  border-radius: 12px;
+}
+
+.first-div{
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.mid-div{
+  border-radius: 0;
+}
+
+.last-div{
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
