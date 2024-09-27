@@ -40,3 +40,15 @@
 body{
   background-color: #f9fafc;
 }
+
+.cuerpo{
+  margin: 32px 24px 76px 24px;
+}
+.subheader{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  span{
+    color: #323232;
+  }
+}

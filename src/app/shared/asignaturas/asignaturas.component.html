@@ -1,4 +1,9 @@
-<div class="cont_tipo1" [ngClass]="divClass">
-  <span>{{ spanText }}</span>
-  <img src="assets/icon/arrow_forward_ios_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="">
+<div class="contenedor" [ngClass]="divClass">
+  <div class="cont_tipo1"  (click)="toggleDiv()" [ngClass]="{ 'bg-active': isVisible, 'bg-inactive': !isVisible }">
+    <span>{{ spanText }}</span>
+    <img src="assets/icon/arrow_forward_ios_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt=">" [ngClass]="{ 'rotate-img': isVisible }">
+  </div>
+  <div class="hidden-div" [ngClass]="{ 'show-div': isVisible }">
+    <button class="boton">Escanear código QR <img src="assets\icon\qr_code_scanner_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="QR"></button>
+  </div>
 </div>
