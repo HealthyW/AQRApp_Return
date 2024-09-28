@@ -1,0 +1,20 @@
+<div class="cont-asig" (click)="toggleContAsig()" [ngClass]="{ 'cont-asig-active': esVisible }">
+  <span>{{ materia }}</span>
+  <img src="assets/icon/arrow_forward_ios_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" [ngClass]="{'rotar-img': esVisible}" alt=">">
+</div>
+@if(esVisible && profesor){
+  <app-asignaturas 
+    [spanText]="'PGY4121_001D'"
+    [divClass]="'mid-div'">
+  </app-asignaturas>
+  <app-asignaturas 
+    [spanText]="'PY41447_005D'"
+    [divClass]="'last-div'">
+  </app-asignaturas>
+}
+@if(esVisible && !profesor){
+  <app-asignaturas
+    [spanText]="'MAT4140_013D'"
+    [divClass]="'last-div'">
+  </app-asignaturas>
+}
