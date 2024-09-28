@@ -15,6 +15,9 @@ export class AuthService {
   private usuarioSubject = new BehaviorSubject<string>('');                 // guardar usuario
   usuario$ = this.usuarioSubject.asObservable();                             // hacerlo observable
 
+  private profesorSubject = new BehaviorSubject<boolean>(null);             // guardar si es profesor
+  profesor$ = this.profesorSubject.asObservable();                        // hacerlo observable 
+
   private loginFailedSubject = new BehaviorSubject<boolean>(false);       // estado de login fallido
   loginFailed$ = this.loginFailedSubject.asObservable();                      // hacerlo observable
 
@@ -26,7 +29,8 @@ export class AuthService {
       id: string, 
       email: string,
       name: string,
-      pass: string 
+      pass: string,
+      profesor: boolean
     }>;
 
     const user = res.find(u => u.email === usuario && u.pass === clave);
@@ -36,6 +40,8 @@ export class AuthService {
       this.isAuthenticatedSubject.next(true);
       this.usuarioSubject.next(user.name);
       this.loginFailedSubject.next(false);
+      this.profesorSubject.next(user.profesor);
+      console.log('Es profesor?', user.profesor);
     } else {
       this.loginFailedSubject.next(true);
       this.isAuthenticatedSubject.next(false);
