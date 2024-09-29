@@ -1,26 +1,26 @@
 <ion-content>
   <router-outlet>
     <app-header></app-header>
+    <div class="menu-container">
       <div class="menu">
         Manual de uso
       </div>
       <div class="menu">
         Acerca de la aplicación
       </div>
-      <div class="header">
+      <div class="enlace">
         @if (usuario) {
-          <span>Bienvenido, {{ usuario }} </span>
-          <a [routerLink]="['/logout']">
-            <img src="assets/icon/account_circle_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="logo">
+          <a class="menu-button" [routerLink]="['/logout']">Cerrar Sesión
+            <img src="assets/icon/asa.png" alt="logo">
           </a>
         }
         @else {
-          <span>Inicie sesión</span>
-          <a [routerLink]="['/login']">
-            <img src="assets/icon/account_circle_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="logo">
+          <a class="menu-button" [routerLink]="['/login']">Iniciar Sesión
+            <img src="assets/icon/asa.png" alt="logo">
           </a>
         }
       </div>
+    </div>
     <app-footer></app-footer>
   </router-outlet>
 </ion-content>
