@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { AuthService } from 'src/app/servicios/auth.service';
@@ -12,10 +12,10 @@ export class LoginComponent  implements OnInit {
 
   usuario: string = '';
   clave: string = '';
+ 
 
   private authService = inject(AuthService)
   private router= inject(Router);
-
   private loginFailedSubject = new BehaviorSubject<boolean>(false);
   loginFailed$ = this.loginFailedSubject.asObservable();
   loginFailed: boolean;
