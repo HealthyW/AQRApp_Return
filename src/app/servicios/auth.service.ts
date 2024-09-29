@@ -1,13 +1,14 @@
 import { inject, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { WebService } from './web.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);     // estado del login
   isAuthenticated$ = this.isAuthenticatedSubject.asObservable();            // hacerlo observable
@@ -54,6 +55,10 @@ export class AuthService {
     this.profesorSubject.next(false);
     this.loginFailedSubject.next(false);
     console.log('Logout');
+    window.location.href = '/login';
+    /* setTimeout(() => {
+      this.router.navigate(['/login']);
+    }, 100); */
   }
 
   IsLoggedIn(){
