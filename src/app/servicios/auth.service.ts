@@ -15,7 +15,7 @@ export class AuthService {
   private usuarioSubject = new BehaviorSubject<string>('');                 // guardar usuario
   usuario$ = this.usuarioSubject.asObservable();                             // hacerlo observable
 
-  private profesorSubject = new BehaviorSubject<boolean>(null);             // guardar si es profesor
+  private profesorSubject = new BehaviorSubject<boolean>(false);             // guardar si es profesor
   profesor$ = this.profesorSubject.asObservable();                        // hacerlo observable 
 
   private loginFailedSubject = new BehaviorSubject<boolean>(false);       // estado de login fallido
@@ -51,6 +51,7 @@ export class AuthService {
   logout(): void {
     this.isAuthenticatedSubject.next(false);
     this.usuarioSubject.next('');
+    this.profesorSubject.next(false);
     this.loginFailedSubject.next(false);
     console.log('Logout');
   }

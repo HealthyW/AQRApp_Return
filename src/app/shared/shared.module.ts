@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AsignaturasComponent } from './asignaturas/asignaturas.component';
 import { IonicModule } from '@ionic/angular';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { MateriaComponent } from './materia/materia.component';
 
 
 
@@ -12,7 +13,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    AsignaturasComponent
+    AsignaturasComponent,
+    MateriaComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   exports: [
     HeaderComponent,
     FooterComponent,
-    AsignaturasComponent
+    AsignaturasComponent,
+    MateriaComponent
   ]
 })
 export class SharedModule { }

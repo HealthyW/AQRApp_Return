@@ -1,9 +1,16 @@
 <ion-content>
   <router-outlet>
     <app-header></app-header>
-      <p>
-        buscar works!
-      </p>
+      <div class="cuerpo">
+        <ion-searchbar class="custom" [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+        <ion-list>
+          <div style="margin-bottom: 4px;" *ngFor="let result of results">
+            <app-asignaturas
+            [spanText]="result"
+            ></app-asignaturas>
+          </div>
+        </ion-list>
+      </div>
   </router-outlet>
 </ion-content>
 <app-footer></app-footer>
