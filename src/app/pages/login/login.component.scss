@@ -1,8 +1,5 @@
 ion-content {
     --overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     height: 100vh;
 }
 
@@ -27,20 +24,28 @@ a{
     font-size: 32px;
 }
 
-.form-text{
+.form{
+    //border: 1px solid;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+.campo {
+    display: flex;
+    flex-direction: column; /* Alinea el label (span) sobre el input */
+    margin-bottom: 20px; /* Espacio entre los campos */
+}
+.form-text {
+    margin-bottom: 5px; /* Espacio entre el label y el input */
+    font-size: 16px;
     color: rgba(0, 0, 0, 0.80);
     font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.16px;
-    padding-top: 28px;
 }
 
-ion-item{
-    --ion-item-border-color: transparent;
-}
 
 .form-input{
     border: 1px solid rgba(0, 0, 0, 0.30);
