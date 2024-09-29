@@ -4,7 +4,7 @@
     align-items: center;
     height: 179px;
     flex-shrink: 1;
-
+    margin-top: 32px;
 }
   
 
@@ -16,8 +16,7 @@
     border-radius: 10px;   
     display: flex;
     align-items: center;
-    margin: 10px 0;       
-    font-size: 19px;       
+    font-size: 16px;       
     text-decoration: none; 
     color: black;          
     transition: background-color 0.3s ease;
@@ -33,6 +32,8 @@
   
 .menu:hover, .menu-button:hover {
     background-color: #ECF5FD !important;
+    height: 39px;
+    width: 312px;
   }
   
   

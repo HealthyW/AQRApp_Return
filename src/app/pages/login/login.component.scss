@@ -3,13 +3,17 @@ ion-content {
     height: 100vh;
 }
 
+a{
+    text-decoration: none;
+}
+
 .titulo{
     color: rgba(32, 81, 128, 0.90);
     font-family: Roboto;
     display: flex;
     flex-direction: column;
-    padding-left: 24px;
-    padding-top: 90px;
+    padding-left: 16px;
+    padding-top: 64px;
 }
 
 .Bienvenido{
@@ -20,24 +24,7 @@ ion-content {
     font-size: 32px;
 }
 
-.form{
-    //border: 1px solid;
-    padding-left: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-right: 20px;
-    padding-top: 30px;
-}
-.campo {
-    display: flex;
-    flex-direction: column; /* Alinea el label (span) sobre el input */
-    margin-bottom: 20px; /* Espacio entre los campos */
-}
-.form-text {
-    margin-bottom: 5px; /* Espacio entre el label y el input */
-    font-size: 16px;
+.form-text{
     color: rgba(0, 0, 0, 0.80);
     font-family: Roboto;
 }
@@ -48,7 +35,6 @@ ion-content {
     border-radius: 10px;
     background: #ECF5FD;
     height: 40px;
-    width: 312px;
     --caret-color: #205180;
 }
 .caja{
@@ -60,7 +46,7 @@ ion-content {
     color: red;
     font-size: 12px;
     padding-top: 15px;
-    padding-left: 30px;
+    padding-left: 16px;
 }
 .recuperar{
     display: flex;
@@ -72,7 +58,7 @@ ion-content {
     line-height: normal;
     letter-spacing: 0.12px;
     justify-self: end;
-    padding-right: 45px;
+    padding-right: 16px;
     padding-top: 15px;
 }
 img{
