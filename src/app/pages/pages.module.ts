@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
+import { RecuperarComponent } from './recuperar/recuperar.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     ConfiguracionComponent,
     LoginComponent,
     LogoutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    RecuperarComponent
   ],
   imports: [
     CommonModule,

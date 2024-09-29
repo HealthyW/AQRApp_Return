@@ -6,13 +6,17 @@ ion-content {
     height: 100vh;
 }
 
+a{
+    text-decoration: none;
+}
+
 .titulo{
     color: rgba(32, 81, 128, 0.90);
     font-family: Roboto;
     display: flex;
     flex-direction: column;
     padding-left: 16px;
-    padding-top: 90px;
+    padding-top: 64px;
 }
 
 .Bienvenido{

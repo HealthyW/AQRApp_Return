@@ -15,7 +15,7 @@
       </ion-item>
     </div>
     <div class="caja">
-      <span class="recuperar">Recuperar contraseña <img src="assets/icon/flecha.png" alt="flecha"> </span>
+      <a [routerLink]="['/recuperar']"><span class="recuperar">Recuperar contraseña <img src="assets/icon/flecha.png" alt="flecha"> </span></a>
       <ion-text class="error" *ngIf="loginFailed">
         Correo o clave incorrectos.
       </ion-text>
