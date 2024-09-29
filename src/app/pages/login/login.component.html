@@ -1,35 +1,37 @@
 <ion-content>
-  <div class="titulo">
-    <span class="Bienvenido">Bienvenido</span>
-    <span class="Inicio">Inicio de sesión</span>
-  </div>
-  <div class="form">
-    <ion-item>
-      <ion-label class="form-text" position="stacked">Correo Electrónico</ion-label>
-      <ion-input color="primary" type="email" fill="outline" class="form-input" [(ngModel)]="usuario"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label class="form-text" position="stacked">Contraseña</ion-label>
-      <ion-input color="primary" color="primary" type="password" class="form-input" [(ngModel)]="clave"></ion-input>
-    </ion-item>
-  </div>
-  <div class="caja">
-    <span class="recuperar">Recuperar contraseña <img src="assets/icon/flecha.png" alt="flecha"> </span>
-    <ion-text class="error" *ngIf="loginFailed">
-      Correo o clave incorrectos.
-    </ion-text>
-  </div>
-  <div class="botones">
-    <ion-button class="boton" color="#20517E" (click)="login(usuario, clave)">
-      @if (isLoading) {
-        <ion-spinner name="bubbles"></ion-spinner>
-      }
-      @else {
-        Iniciar sesión
-      }
-    </ion-button>
-    <span class="o">o</span>
-    <span class="reg">Registrarse</span>
+  <div class="cuerpo">
+    <div class="titulo">
+      <span class="Bienvenido">Bienvenido</span>
+      <span class="Inicio">Inicio de sesión</span>
+    </div>
+    <div class="form">
+      <ion-item>
+        <ion-label class="form-text" position="stacked">Correo Electrónico</ion-label>
+        <ion-input color="primary" type="email" fill="outline" class="form-input" [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label class="form-text" position="stacked">Contraseña</ion-label>
+        <ion-input color="primary" color="primary" type="password" class="form-input" [(ngModel)]="clave"></ion-input>
+      </ion-item>
+    </div>
+    <div class="caja">
+      <span class="recuperar">Recuperar contraseña <img src="assets/icon/flecha.png" alt="flecha"> </span>
+      <ion-text class="error" *ngIf="loginFailed">
+        Correo o clave incorrectos.
+      </ion-text>
+    </div>
+    <div class="botones">
+      <ion-button class="boton" color="#20517E" (click)="login(usuario, clave)">
+        @if (isLoading) {
+          <ion-spinner name="bubbles"></ion-spinner>
+        }
+        @else {
+          Iniciar sesión
+        }
+      </ion-button>
+      <span class="o">o</span>
+      <span class="reg">Registrarse</span>
+    </div>
   </div>
 
   <app-footer></app-footer>
