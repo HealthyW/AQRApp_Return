@@ -49,7 +49,7 @@ ion-button{
     background: #20517E;
 }
 
-ion-button.cancelar{
+a.cancelar{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +61,11 @@ ion-button.cancelar{
     border-radius: 10px;
     border: 1px solid rgb(36, 35, 35);
     background: #fff;
+}
+
+a.cancelar:hover{
+    background: #000;
+    color: #fff;
 }
 
 .hidden-div{

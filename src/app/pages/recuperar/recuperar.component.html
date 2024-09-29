@@ -10,7 +10,7 @@
     </div>
     <div class="centrar-botones">
       <ion-button class="enviar" color="#20517E"  (click)="validarCampo(myInput)"> Recuperar </ion-button>
-      <a [routerLink]="['/login']"><ion-button class="cancelar" color="#20517E"> Cancelar</ion-button></a>
+      <a [routerLink]="['/login']" class="cancelar">Cancelar</a>
     </div>
   </div>
   <ion-modal [isOpen]="isModalOpen" (didDismiss)="handleModalDismiss()">
