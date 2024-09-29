@@ -1,9 +1,27 @@
 <ion-content>
   <router-outlet>
     <app-header></app-header>
-      <p>
-        configuracion works!
-      </p>
+    <div class="menu-container">
+      <div class="menu">
+        Manual de uso
+      </div>
+      <div class="menu">
+        Acerca de la aplicación
+      </div>
+      <div class="enlace">
+        @if (usuario) {
+          <a class="menu-button" [routerLink]="['/logout']">Cerrar Sesión
+            <img src="assets/icon/asa.png" alt="logo">
+          </a>
+        }
+        @else {
+          <a class="menu-button" [routerLink]="['/login']">Iniciar Sesión
+            <img src="assets/icon/asa.png" alt="logo">
+          </a>
+        }
+      </div>
+    </div>
+    <app-footer></app-footer>
   </router-outlet>
 </ion-content>
 <app-footer></app-footer>

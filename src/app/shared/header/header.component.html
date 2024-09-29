@@ -1,9 +1,11 @@
 <div class="header">
   @if (usuario) {
-    <span>Bienvenido, {{usuario}} </span>
+    <span>Bienvenido, {{ usuario }} </span>
+    <a [routerLink]="['/logout']">
+      <img src="assets/icon/account_circle_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="logo">
+    </a>
   }
   @else {
     <span>No eres Bienvenido</span>
   }
-  <img src="assets/icon/account_circle_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="logo">
 </div>
