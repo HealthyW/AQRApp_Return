@@ -29,18 +29,16 @@ a{
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding-right: 20px;
     padding-top: 30px;
 }
 .campo {
     display: flex;
-    flex-direction: column; /* Alinea el label (span) sobre el input */
-    margin-bottom: 20px; /* Espacio entre los campos */
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 .form-text {
-    margin-bottom: 5px; /* Espacio entre el label y el input */
+    margin-bottom: 5px;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.80);
     font-family: Roboto;
