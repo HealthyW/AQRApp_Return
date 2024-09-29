@@ -1,7 +1,7 @@
 <ion-content>
   <router-outlet>
     <app-header></app-header>
-    <section class="cuerpo">
+    <section class="cuerpo" *ngIf="isAuthenticated; else notAuthenticated">
       <div class="subheader">
         <span>
           Todas tus asignaturas
@@ -25,6 +25,11 @@
         </app-materia>
       </div>
     </section>
+    <ng-template #notAuthenticated>
+      <div class="cuerpo">
+        <p>No existen datos</p>
+      </div>
+    </ng-template>
   </router-outlet>
 </ion-content>
 <app-footer></app-footer>

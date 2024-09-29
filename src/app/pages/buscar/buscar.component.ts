@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { AuthService } from 'src/app/servicios/auth.service';
 
 @Component({
   selector: 'app-buscar',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarComponent  implements OnInit {
 
+  isAuthenticated: boolean = false;
+  private authService = inject(AuthService)
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.authService.isAuthenticated$.subscribe(
+      (isAuth: boolean) => {
+        this.isAuthenticated = isAuth;
+      }
+    );
+  }
 
   public data = [
     'PGY4121_001D',

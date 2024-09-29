@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="cuerpo">
+    <h1 class="titulo">
+      Restablecer contraseña
+    </h1>
+    <label> Ingrese su correo eléctronico</label>
+    <input #myInput type="text" class="form-input" >
+    <div class="error" [ngClass]="{ 'show-div': isVisible, 'hidden-div': !isVisible}">
+      <span>Debe rellenar el campo</span>
+    </div>
+    <div class="centrar-botones">
+      <ion-button class="enviar" color="#20517E"  (click)="validarCampo(myInput)"> Recuperar </ion-button>
+      <a [routerLink]="['/login']" class="cancelar">Cancelar</a>
+    </div>
+  </div>
+  <ion-modal [isOpen]="isModalOpen" (didDismiss)="handleModalDismiss()">
+    <ng-template>
+      <div class="modal-content">
+        <h2>Correo Enviado</h2>
+        <p>Se ha enviado un correo electrónico con los pasos para recuperar su contraseña.</p>
+        <div class="centrar">
+          <ion-button class="enviar" color="#20517E" (click)="closeModal()"> Cerrar </ion-button>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+</ion-content>
