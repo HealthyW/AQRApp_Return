@@ -1,7 +1,7 @@
 <ion-content>
   <router-outlet>
     <app-header></app-header>
-      <div class="cuerpo">
+      <div class="cuerpo" *ngIf="isAuthenticated; else notAuthenticated">
         <ion-searchbar class="custom" [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
         <ion-list>
           <div style="margin-bottom: 4px;" *ngFor="let result of results">
@@ -11,6 +11,11 @@
           </div>
         </ion-list>
       </div>
+      <ng-template #notAuthenticated>
+        <div class="cuerpo">
+          <p>No existen datos</p>
+        </div>
+      </ng-template>
   </router-outlet>
 </ion-content>
 <app-footer></app-footer>

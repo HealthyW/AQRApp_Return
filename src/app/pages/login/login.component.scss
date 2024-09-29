@@ -6,13 +6,17 @@ ion-content {
     height: 100vh;
 }
 
+a{
+    text-decoration: none;
+}
+
 .titulo{
     color: rgba(32, 81, 128, 0.90);
     font-family: Roboto;
     display: flex;
     flex-direction: column;
-    padding-left: 24px;
-    padding-top: 90px;
+    padding-left: 16px;
+    padding-top: 64px;
 }
 
 .Bienvenido{
@@ -23,10 +27,6 @@ ion-content {
     font-size: 32px;
 }
 
-.form{
-    //border: 1px solid;
-    padding-left: 10px;
-}
 .form-text{
     color: rgba(0, 0, 0, 0.80);
     font-family: Roboto;
@@ -47,7 +47,6 @@ ion-item{
     border-radius: 10px;
     background: #ECF5FD;
     height: 40px;
-    width: 312px;
     --caret-color: #205180;
 }
 .caja{
@@ -59,7 +58,7 @@ ion-item{
     color: red;
     font-size: 12px;
     padding-top: 15px;
-    padding-left: 30px;
+    padding-left: 16px;
 }
 .recuperar{
     display: flex;
@@ -71,7 +70,7 @@ ion-item{
     line-height: normal;
     letter-spacing: 0.12px;
     justify-self: end;
-    padding-right: 45px;
+    padding-right: 16px;
     padding-top: 15px;
 }
 img{
