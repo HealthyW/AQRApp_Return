@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, inject } from '@angular/core';
 import { AuthService } from 'src/app/servicios/auth.service';
 import QRious from 'qrious';
 
@@ -12,7 +12,9 @@ export class AsignaturasComponent  implements OnInit {
   profesor:boolean = false;
   isVisible = false;
   isVisibleQr = false;
-  qrData: string = '';
+  qrData: string= '';
+  usuario: string= '';
+
 
   @ViewChild('qrCanvas') qrCanvas!: ElementRef<HTMLCanvasElement>;
 
@@ -24,6 +26,9 @@ export class AsignaturasComponent  implements OnInit {
   ngOnInit():void {
     this.authService.profesor$.subscribe(isProfesor => {
       this.profesor = isProfesor;
+    });
+    this.authService.usuario$.subscribe(usuario =>{
+      this.usuario = usuario;
     });
   }
 
@@ -48,7 +53,7 @@ export class AsignaturasComponent  implements OnInit {
     const segundos = String(fechaActual.getSeconds()).padStart(2, '0');
     
     const fechaHora = `${año}-${mes}-${día}_${horas}:${minutos}:${segundos}`;
-    this.qrData = `http://localhost:8100/asistencia/${this.spanText}/${fechaHora}`;
+    this.qrData = `http://localhost:8100/asistencia/${this.spanText}/${this.usuario}/${fechaHora}`;
 
     this.createQR();
     this.isVisibleQr = true;
