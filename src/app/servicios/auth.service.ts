@@ -65,4 +65,27 @@ export class AuthService {
     return this.isAuthenticated$;
   }
 
+  async usuarioExiste(email: string): Promise<boolean> {
+    const url = 'https://66f610b9436827ced975d4b7.mockapi.io';
+    const res = await this.webservice.request('GET', url, 'Cuentas') as Array<{ 
+      email: string,
+    }>;
+
+    // Verifica si el email ya está registrado
+    return res.some(u => u.email === email);
+  }
+
+  async registrarBD(nombre: string, email: string, password: string, profesor: boolean) {
+    const url = 'https://66f610b9436827ced975d4b7.mockapi.io';
+    const newUser = {
+      name: nombre,
+      email: email,
+      pass: password,
+      profesor: profesor
+    };
+
+    // Realiza un POST a la API para registrar al usuario
+    await this.webservice.request('POST', url, 'Cuentas', newUser);
+  }
+
 }

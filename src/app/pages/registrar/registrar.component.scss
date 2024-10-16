@@ -1,0 +1,102 @@
+ion-content {
+    --overflow: hidden;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.titulo{
+    color: rgba(32, 81, 128, 0.90);
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    padding-top: 30px;
+}
+
+.Bienvenido{
+    font-size: 24px;
+}
+
+.Inicio{
+    font-size: 32px;
+}
+
+.form{
+    //border: 1px solid;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+ion-input {
+    --highlight-color-focused: transparent;
+    --highlight-color-invalid: transparent;
+    --ion-color-base: transparent;
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.form-text {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Roboto;
+}
+
+
+.form-input{
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    border-radius: 10px;
+    background: #ECF5FD;
+    height: 40px;
+    --caret-color: #205180;
+}
+.caja{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.error{
+    color: red;
+    font-size: 12px;
+    padding-top: 15px;
+    padding-left: 16px;
+}
+.recuperar{
+    display: flex;
+    color: rgba(32, 81, 128, 0.90);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    justify-self: end;
+    padding-right: 16px;
+    padding-top: 15px;
+}
+img{
+    height: 12px;
+}
+.botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(32, 81, 128, 0.90);
+    padding-top: 30px;
+    font-size: 15px;
+}
+ion-button{
+    width: 148px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    background: #20517E;
+}
