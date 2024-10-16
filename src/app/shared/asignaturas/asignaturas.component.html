@@ -6,19 +6,20 @@
   <div class="hidden-div" [ngClass]="{ 'show-div': isVisible, 'show-qr':isVisibleQr && isVisible}">
     @if (profesor) {
       <div class="btn-ge-qr">
-        <div>
-          <button class="boton" (click)="activateDivQr()">
+        <div> 
+          <button class="boton" (click)="generarQR()">
             Generar CódigoQR 
             <img src="assets\icon\qr_code_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="QR">
           </button>
         </div>
         <div class="hidden-div-qr" [ngClass]="{ 'show-div-qr': isVisibleQr && isVisible}">
-          <img src="assets\fotos\frame.png" alt="walter" class="hidden-qr" [ngClass]="{'show-qr': isVisibleQr}">
+          <canvas #qrCanvas class="hidden-qr" [ngClass]="{'show-qr': isVisibleQr}"></canvas>
         </div>
-      </div>      
+      </div>
     }
     @else {
       <button class="boton">Escanear CódigoQR <img src="assets\icon\qr_code_scanner_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="QR"></button>
     }
   </div>
+  <!--<h6>{{ qrData }}</h6>  -->
 </div>
