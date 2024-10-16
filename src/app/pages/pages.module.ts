@@ -13,6 +13,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { RecuperarComponent } from './recuperar/recuperar.component';
+import { RegistrarComponent } from './registrar/registrar.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { RecuperarComponent } from './recuperar/recuperar.component';
     LoginComponent,
     LogoutComponent,
     NotFoundComponent,
-    RecuperarComponent
+    RecuperarComponent,
+    RegistrarComponent
   ],
   imports: [
     CommonModule,

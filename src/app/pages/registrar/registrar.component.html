@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="cuerpo">
+   <div class="titulo">
+     <span class="Bienvenido">Bienvenido</span>
+     <span class="Inicio">Registro de usuario</span>
+   </div>
+   <div class="form">
+     <div class="campo">
+       <span class="form-text">Nombre</span>
+       <ion-input color="primary" type="text" class="form-input" [(ngModel)]="nombre"></ion-input>
+     </div>
+     <div class="campo">
+       <span class="form-text">Correo Electrónico</span>
+       <ion-input color="primary" type="email" class="form-input" [(ngModel)]="email"></ion-input>
+     </div>
+     <div class="campo">
+       <span class="form-text">Contraseña</span>
+       <ion-input color="primary" type="password" class="form-input" [(ngModel)]="password"></ion-input>
+     </div>
+     <div class="campo">
+       <ion-checkbox [(ngModel)]="profesor"></ion-checkbox>
+       <label>¿Eres profesor?</label>
+     </div>
+   </div>
+   <div class="caja">
+     <ion-text class="error" *ngIf="registrationFailed">
+       El correo ya está registrado.
+     </ion-text>
+   </div>
+   <div class="botones">
+     <ion-button class="boton" color="#20517E" (click)="registrarUsuario(nombre, email, password, profesor)">
+       Registrar
+     </ion-button>
+   </div>
+  </div>
+ 
+   <app-footer></app-footer>
+ </ion-content>
