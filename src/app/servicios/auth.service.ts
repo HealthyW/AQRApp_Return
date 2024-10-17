@@ -55,10 +55,10 @@ export class AuthService {
     this.profesorSubject.next(false);
     this.loginFailedSubject.next(false);
     console.log('Logout');
-    window.location.href = '/login';
-    /* setTimeout(() => {
+    //window.location.href = '/login';
+    setTimeout(() => {
       this.router.navigate(['/login']);
-    }, 100); */
+    }, 1000);
   }
 
   IsLoggedIn(){
@@ -71,7 +71,6 @@ export class AuthService {
       email: string,
     }>;
 
-    // Verifica si el email ya está registrado
     return res.some(u => u.email === email);
   }
 
@@ -84,7 +83,6 @@ export class AuthService {
       profesor: profesor
     };
 
-    // Realiza un POST a la API para registrar al usuario
     await this.webservice.request('POST', url, 'Cuentas', newUser);
   }
 

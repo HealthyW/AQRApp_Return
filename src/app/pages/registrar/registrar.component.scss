@@ -1,8 +1,3 @@
-ion-content {
-    --overflow: hidden;
-    height: 100vh;
-}
-
 a{
     text-decoration: none;
 }
@@ -42,6 +37,12 @@ ion-input {
     flex-direction: column;
     margin-bottom: 20px;
 }
+.select{
+    display: flex;
+}
+.prof{
+    padding-right: 10px;
+}
 .form-text {
     margin-bottom: 5px;
     font-size: 16px;
@@ -68,21 +69,16 @@ ion-input {
     padding-top: 15px;
     padding-left: 16px;
 }
-.recuperar{
-    display: flex;
+.volver{
     color: rgba(32, 81, 128, 0.90);
     font-family: Roboto;
-    font-size: 12px;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.12px;
-    justify-self: end;
-    padding-right: 16px;
-    padding-top: 15px;
 }
 img{
-    height: 12px;
+    padding-bottom: 3px;
+    height: 20px;
+    transform: rotate(180deg);
 }
 .botones{
     display: flex;

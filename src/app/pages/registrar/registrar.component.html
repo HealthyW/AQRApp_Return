@@ -1,5 +1,6 @@
 <ion-content>
   <div class="cuerpo">
+    <a [routerLink]="['/login']"><span class="volver"> <img src="assets/icon/arrow_forward_ios_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="arrow">Volver</span></a>
    <div class="titulo">
      <span class="Bienvenido">Bienvenido</span>
      <span class="Inicio">Registro de usuario</span>
@@ -8,18 +9,27 @@
      <div class="campo">
        <span class="form-text">Nombre</span>
        <ion-input color="primary" type="text" class="form-input" [(ngModel)]="nombre"></ion-input>
+       <ion-text class="error" *ngIf="nombreVacio">
+         El nombre es obligatorio.
+       </ion-text>
      </div>
      <div class="campo">
        <span class="form-text">Correo Electrónico</span>
        <ion-input color="primary" type="email" class="form-input" [(ngModel)]="email"></ion-input>
+       <ion-text class="error" *ngIf="emailVacio">
+         El correo electrónico es obligatorio.
+       </ion-text>
      </div>
      <div class="campo">
        <span class="form-text">Contraseña</span>
        <ion-input color="primary" type="password" class="form-input" [(ngModel)]="password"></ion-input>
+       <ion-text class="error" *ngIf="passwordVacio">
+         La contraseña es obligatoria.
+       </ion-text>
      </div>
-     <div class="campo">
+     <div class="select">
+        <label class="prof">¿Eres profesor?</label>
        <ion-checkbox [(ngModel)]="profesor"></ion-checkbox>
-       <label>¿Eres profesor?</label>
      </div>
    </div>
    <div class="caja">
